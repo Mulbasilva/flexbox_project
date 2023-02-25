@@ -52,6 +52,22 @@ hr{
 	width: 8.75rem;
 	margin: 1.25rem auto;
 }
+
+p{
+	line-height: 21.82px;
+	padding: 0 10px;
+}
+
+.section__title{
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+
+img{
+	display: block;   /*essa regra é para tornar a imagem responsivel*/
+	max-width: 100%;
+}
 /**********************************/
 /* 2. Menu
 /**********************************/
@@ -93,7 +109,20 @@ hr{
 /**********************************/
 /* 4. Quem somos
 /**********************************/
+.us{
+	max-width: 960px;
+	margin: 0 auto;
+}
 
+.us-c{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.us-c__text{
+	flex: 6 1 160px;
+}
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
