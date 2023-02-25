@@ -123,10 +123,35 @@ img{
 .us-c__text{
 	flex: 6 1 160px;
 }
+
+.somos__img{
+	width: 250px;
+	height: 300px;
+}
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
+.cursos{
+	max-width: 960px;
+	margin: 0 auto;
+}
 
+.cursos-c{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.curso{
+	width: 280px;
+	margin: 0 20px;
+}
+
+.curso__titulo{
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 10px 0 5px 0;
+}
 /**********************************/
 /* 6. Planos
 /**********************************/
