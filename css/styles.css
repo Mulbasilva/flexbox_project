@@ -23,14 +23,19 @@
 :root{
 	--ff-primary: "Nunito", helvetica, arial, sans-serif;
 
-	--clr-green-dark: #097cc9;
-	--clr-green-light: #698fc2;
-	--clr-pink-light: #e08068;
+	--clr-blue-dark: #097cc9;
+	--clr-blue-light: #698fc2;
+	--clr-pink-light: #d69989;
 	--clr-white: #F5F5F5;
+	--clr-marron: #c46032;
 }
 /**********************************/
 /* 1. Estilos gerais
 /**********************************/
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	background-color: var(--clr-white);
 	font-family: var(--ff-primary);
@@ -72,7 +77,7 @@ img{
 /* 2. Menu
 /**********************************/
 .menu-bg{
-	background-color: var(--clr-green-light);
+	background-color: var(--clr-blue-light);
 }
 
 .menu{
@@ -81,7 +86,9 @@ img{
 	justify-content: space-between;
 	max-width: 60rem; /*960 in pixels*/
 	margin: 0 auto;
+	padding: 15px;
 	flex-wrap: wrap;
+	font-size: 20px;
 }
 
 .logotipo{
@@ -161,7 +168,7 @@ img{
 /* 6. Planos
 /**********************************/
 .planos{
-	background-color: var(--clr-green-dark);
+	background-color: var(--clr-blue-dark);
 }
 
 
@@ -171,9 +178,10 @@ img{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: flex-end;
 }
 .card{
-	border: solid var(--clr-green-light) 2px;
+	border: solid var(--clr-blue-light) 2px;
 	margin-top: 2rem;
 	padding: 1.25rem 2.5rem; 
 	width: 290px;
@@ -207,7 +215,7 @@ img{
 }
 
 .plano__list{
-	list-style: circle;
+	/* list-style: circle; */
 	margin: 0 auto;
 	max-width: 195px;
 }
@@ -215,22 +223,178 @@ img{
 .plano__item{
 	margin: 10px 0;
 	font-size: italic;
+	display: flex;
+	align-items: center;
 }
-.card__b-comprar{
-	border: 2px solid var(--clr-green-light);
-	padding: 4px 2px;
+
+.plano__item::before{
+	content: "";
+	display: block;
+	width: .3125rem;
+	height: .3125rem;
+	background-color: var(--clr-blue-light);
+	border-radius: 50%;
+	margin-right: .3125rem;
+}
+
+
+.card__btn-comprar{
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
 	font-weight: bold;
+	margin: 15px auto;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--clr-blue-light);
+}
+
+.card:last-child{
+	background-color: var(--clr-marron);
+}
+@media screen and (max-width: 800px){
+	.card:nth-child(3){
+		order: -2;
+	}	
+	.card:nth-child(2){
+		order: -1;
+	}
 }
 
 /**********************************/
 /* 7. Vantagens
 /**********************************/
+.vantagens{
+	max-width: 960px;
+	margin: 0 auto;
+}
 
+.vantagens__container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.vantagens__p{
+	max-width: 240px;
+	margin: 10px;
+}
+
+.vantagens__titulo::before{
+	content: '';
+	width: 10px;
+	height: 25px;
+	display: inline-block;
+	margin-right: 5px;
+	background-color: var(--clr-marron);
+}
+
+/* para mudar as cores de triangulo nos titulos */
+/* .vantagens__p:nth-of-type(3n+1), 
+.vantagens__titulo::before{
+	background-color: var(--clr-blue-dark);
+}
+
+.vantagens__p:nth-of-type(3n+2), 
+.vantagens__titulo::before{
+	background-color: var(--clr-marron);
+}
+
+.vantagens__p:nth-of-type(3n+3), 
+.vantagens__titulo::before{
+	background-color: var(--clr-blue-dark);
+} */
+
+@media screen and (max-width: 800px){
+	.vantagens__p{
+		max-width: 220px;
+	}
+}
+
+.vantagens__titulo{
+	font-size: 1.7rem;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
 /**********************************/
 /* 8. Newsletter
 /**********************************/
+.newsletter__section{
+	background-color: var(--clr-marron);
+}
+
+.newsletter__container{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter__infor{
+	flex: 1 1 260px;
+	padding-left: 10px;
+}
+
+.newsletter__titulo{
+	font-size: 2.62rem;
+	font-weight: bold;
+}
+
+.newsletter__subtitulo{
+	font-style: italic;
+}
+
+.newslatter__formulario{
+	flex: 2 1 260px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter__input{
+	flex: 3 1 260px;
+	font-size: 1.25rem;
+	width: 325px;
+	color: black;
+	font-style: italic;
+	font-family: var(--ff-primary);
+	border: 5px solid var(--clr-blue-dark);
+	padding: 10px;
+	margin: 0;
+	border-radius: 0;
+}
+
+.newsletter__summit{
+	flex: 1 1 260px;
+	width: 192px;
+	font-family: var(--ff-primary);
+	font-size: 2.25rem;
+	font-weight: bold;
+	text-decoration: uppercase;
+	background: var(--clr-blue-dark);
+	color: black;
+	cursor: pointer;
+	border: none;
+	padding: 15px;
+}
 
 /**********************************/
 /* 9. Footer
 /**********************************/
+.footer{
+	background-color: var(--clr-blue-dark);
+}
 
+.footer__content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 55px calc((100% - 960px) /2);
+}
+
+.footer__descricao, 
+.footer__logo{
+	padding-left: 10px;
+	padding-right: 10px;
+}
